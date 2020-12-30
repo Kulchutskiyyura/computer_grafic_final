@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Комп'ютерна графіка </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style4.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+  <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="top-toolbar">
+    <div class="inside">
+      <a href="http://127.0.0.1:5000/" class="toolbar-button-md"> <img height="24px" src="static\home.png"> </a>
+      <style>
+        .button_clas
+        {
+          background-color: #FFFFFF;
+          border: 0px;
+        }
+      </style>
+      <button id="button" class="toolbar-button-md" ><img height="24px" src="static\file.png"> Файл</button>
+      <input id="file-input" type="file" name="name" style="display: none;" />
+      <a href="http://127.0.0.1:5000/" id="save_img" class="toolbar-button-md"> <img height="24px" src="static\folder.png"> Бібліотека</a>
+    </div>
+    <h1> <img height="40px" src="static\unicorn.png">Комп'ютерна графіка</h1>
+    <div class="inside">
+      <a href="http://127.0.0.1:5000/choose" class="toolbar-button-md"><img height="24px" src="static\student-hat.png">Уроки та приклади</a>
+    </div>
+  </div>
+
+  <div class="bottom-toolbar">
+    
+    
+    <div class="inside-toolbar">
+      <button class="toolbar-button-sm" type="button" data-toggle="modal" data-target="#myModal"  onclick="fracta_path()">
+        <img height="20px" src="static\firework.png" alt="lorem"> Фрактал
+      </button>
+    </div>
+    <div class="inside-toolbar">
+      <button class="toolbar-button-sm" type="button"  data-toggle="modal" data-target="#changeModel" onclick="color_path()">
+        <img src="static\gallery.png"  height="20px" alt="lorem">Колірна модель
+     </button>
+      <button class="toolbar-button-sm" type="button"  data-toggle="modal" data-target="#colorModal" onclick="color_path()">
+         <img src="static\palette.png"  height="20px" alt="lorem"> Змінити яскравість кольорів
+      </button>
+    </div>
+   
+    <div class="inside-toolbar">
+      <button class="toolbar-button-sm"  type="button"  data-toggle="modal" data-target="#afineModal" onclick="afine_path()">
+        <img height="15px" src="static\shape.png" alt="lorem"> Афінні перетворення</button>
+    </div>
+    
+    
+  </div>
+  <script>
+    let is_main = {{main}}
+
+    function fracta_path()
+    {
+      if(is_main===1 || document.location.href!='http://127.0.0.1:5000/fractal')
+      {
+        document.location='/fractal'
+      }
+      else{
+
+      }
+    }
+
+    function color_path()
+    {
+      if(is_main===1 || document.location.href!='http://127.0.0.1:5000/color')
+      {
+        document.location='/color'
+      }
+      else{
+        console.log(document.location)
+      }
+    }
+
+    function afine_path()
+    {
+      if(is_main===1 || document.location.href!='http://127.0.0.1:5000/afine')
+      {
+        document.location='/afine'
+      }
+      else{
+        console.log(document.location)
+      }
+    }
+  </script>
+</body>
+
+
+{% block content %}
+{% endblock %}
+</html>

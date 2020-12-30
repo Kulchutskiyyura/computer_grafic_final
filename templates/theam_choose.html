@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+ .inner_div{
+    
+    border: 2px;
+    width: 350px;
+    height: 400px;
+    margin-bottom: 75px;
+    margin-top: 25px;
+   
+ }
+</style>
+<div style=" margin-left: 600px;">
+    <div class="inner_div">
+        
+        <img src="static\fractal.jpg" style="height: 350px; width: 350px;" >
+        <h2>Фрактали</h2>
+        <button id="1"  onclick="document.location='/fracal_info'">Продовжити</button>
+    </div>
+
+    <div class="inner_div">
+        
+        <img src="static\model.jpg" style="height: 350px; width: 350px;" >
+        
+        <h2>Кольорові моделі</h2>
+        <button>Продовжити</button>
+    </div>
+
+    <div class="inner_div">
+        
+        <img src="static\afine.gif" style="height: 350px; width: 350px;" >
+        
+        <h2>Афінні перетворення</h2>
+        <button>Продовжити</button>
+    </div>
+
+</div>
+
+<script>
+
+</script>
+{% endblock %}

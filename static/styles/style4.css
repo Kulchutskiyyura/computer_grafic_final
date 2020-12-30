@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "SF UI Display";
+  src:  url("/fonts/SFUIDisplay-Regular.ttf") format("ttf");
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #EEF6FF;
+}
+
+.error {
+  color:  #900;
+  background-color:white;
+  
+}
+
+.top-toolbar {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 84px;
+}
+
+.bottom-toolbar {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 64px;
+}
+
+.toolbar-button-md {
+  height: 64px;
+  flex:none;
+  margin: 12px 0px;
+  text-decoration: none;
+  color:inherit;
+  padding: 24px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: none;
+  background-color: #FFFFFF;
+  border:none
+}
+
+.toolbar-button-md img {
+  height: 24px;
+  width: 24px;
+}
+
+.toolbar-button-md:active {
+  background-color: #EEF6FF;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.toolbar-button-sm {
+    height: 36px;
+    flex:none;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.toolbar-button-sm:active {
+  background-color: #EEF6FF;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.toolbar-button-sm img {
+  height: 16px;
+  width: 16px;
+}
+
+.inside {
+  display:flex;
+  justify-content:center;
+}
+
+.inside-toolbar {
+  display:flex;
+  margin: 4px 14px;
+}
+
+
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  margin-top:200px ;
+
+}
+
+.result_canvas .tooltiptext {
+  display: none;
+  width: 120px;
+  background-color: black;
+  color: #FFFFFF;
+  text-align:center;
+  padding: 5px 0;
+  border-radius:6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.result-canvas:hover .tooltiptext {
+  display: block;
+}
